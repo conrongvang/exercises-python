@@ -22,25 +22,17 @@ def solve(input_data):
     Hàm có sẵn: bin(10) == '0b1010'
     Hàm có sẵn tạo ra integer từ string: 69 == int('69')
     """
-
-    binary = bin(input_data)
-    length = len(binary)
+    str = bin(input_data)
+    length = len(str)
     last = 0
-    concatenation = ""
     for index in range(length):
-        if(binary[index] == "1"):
+        if (str[index] == "1"):
             last = index
-    if(last != (length-1)):
-        concatenation = binary[last:]
-
-    result = concatenation
-    # Xoá dòng raise và Viết code vào đây set result làm kết quả
-
+    result = str[last:]
     return result
 
-
 def main():
-    print(solve(data))
+    solve(data)
 
 
 if __name__ == "__main__":
