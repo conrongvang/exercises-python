@@ -16,15 +16,19 @@ def solve(words):
     result = []
 
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
-    ordinal = []
-    sum2 = 0
-    tamp2 = 0
+    asciiList = string.ascii_lowercase
+    ordinal = dict()
+    
     for index in range(len(string.ascii_lowercase)):
-        ordinal.append(index+1)
-    print("ordinal: ",ordinal, "\n")
-    length = len(words)
-    # return result
+        ordinal[asciiList[index]] = index+1
 
+    for item in words:
+        sum = 0
+        for letter in item:
+            sum += ordinal[letter.lower()]
+        result.append(sum)
+
+    return result
 
 def main():
     words = [

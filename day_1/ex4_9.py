@@ -8,11 +8,14 @@ def solve(numbers):
     Gợi ý: python có sẵn giá trị âm/dương vô cùng.
     """
     assert isinstance(numbers, list)
-    result = None
+    
 
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
-    raise NotImplementedError("Bạn chưa làm bài này")
-
+    max = 0
+    for i in numbers:
+        if (i > max):
+            max = i
+    result = max
     return result
 
 

@@ -13,18 +13,28 @@ def solve():
     """
 
     start = time.time()
-    result = None
 
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
-    raise NotImplementedError("Bạn chưa làm bài này")
+    result = [
+        (a, b, c, d, e, f, g, h, i)
+        for a in range(1, 10, 1)
+        for b in range(1, 10, 1)
+        for c in range(1, 10, 1)
+        for d in range(1, 10, 1)
+        for e in range(1, 10, 1)
+        for f in range(1, 10, 1)
+        for g in range(1, 10, 1)
+        for h in range(1, 10, 1)
+        for i in range(1, 10, 1)
+        if (a + 13 * b / c + d + 12 * e - f - 11 + g * h / i - 10 == 66)
+    ]
 
+    print(result)
     print("Took: {}".format(time.time() - start))
-    return result
 
 
 def main():
-    print(solve())
-
+    solve()
 
 if __name__ == "__main__":
     main()
